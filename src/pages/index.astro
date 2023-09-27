@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LandingHeader from '../components/LandingHeader.astro'
+import HeroSection from '../components/HeroSection.astro'
+import WeddingSection from '../components/WeddingSection.astro';
+---
+
+<Layout title="Jack & Yeldy Wedding">
+	<LandingHeader />
+	<main class="relative w-full h-screen overflow-auto snap-y snap-mandatory">
+		<div class="snap-center">
+			<HeroSection />
+		</div>
+		<div class="snap-center">
+			<WeddingSection />
+		</div>
+	</main>
+</Layout>

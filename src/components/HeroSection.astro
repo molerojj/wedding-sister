@@ -1,0 +1,66 @@
+---
+---
+
+<section id="hero" class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden">
+	<div class="relative z-30 h-full flex flex-col">
+
+		<h2 class="text-white text-8xl font-playf pt-40 font-medium">Jack & Yeldy</h2>
+
+		<div class="flex flex-col items-center justify-center pt-10 gap-y-4 text-white">
+			<div class="flex justify-center items-center lg:gap-x-10 gap-7 font-playf text-xl">
+				<p class="day"></p>:
+				<p class="hour"></p>:
+				<p class="min"></p>:
+				<p class="sec"></p>
+			</div>
+			<div class="flex font-playf text-xl lg:gap-x-14 gap-x-10">
+				<p>Days</p>
+				<p>Hours</p>
+				<p>Min</p>
+				<p>Sec</p>
+			</div>
+		</div>
+		
+		<h2 class="font-semibold pt-7 px-20 text-white">Home2 Suites By Hilton Pompano Beach Pier, FL</h2>
+
+	</div>
+	
+	<div class="absolute top-16 bottom-0 h-full w-full z-10 opacity-30">
+		<img
+			src="./altar.jpg" 
+			alt="Yeldy y Jack" 
+			class="object-cover object-center w-full h-full" 
+		/>
+	</div>
+</section>
+
+<script>
+	function actualizarContador() {
+// Fecha objetivo
+	const fechaObjetivo = new Date("2023-12-15T23:59:59");
+
+	// Fecha actual
+	const fechaActual = new Date();
+
+	// Diferencia en milisegundos entre las fechas
+	const diferencia = fechaObjetivo - fechaActual;
+
+	// Cálculos para obtener los días, horas, minutos y segundos restantes
+	const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+	const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+	const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+	// Actualizar el contenido del contador
+	document.querySelector(".day").innerHTML = `${dias}`;
+	document.querySelector(".hour").innerHTML = `${horas}`;
+	document.querySelector(".min").innerHTML = `${minutos}`;
+	document.querySelector(".sec").innerHTML = `${segundos}`;
+
+	// Actualizar cada segundo
+setTimeout(actualizarContador, 1000);
+}
+
+actualizarContador();
+
+</script>
