@@ -1,0 +1,199 @@
+---
+---
+
+<nav id="landing-header" class="py-3 shadow-md px-11 flex items-center fixed top-0 w-full justify-between z-40 bg-[#FAFAFA]">
+
+    <a class="text-3xl font-bold leading-none" href="#">
+        <h1 class="text-gray-700 font-playf text-3xl">J&Y</h1>
+    </a>
+
+    <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-gray-900 p-3">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Mobile menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 transition-colors duration-400 [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+        <li><a href="#wedding">Our Wedding</a></li>
+        <li><a href="#reception">Reception</a></li>
+        <li><a href="#reception">Ceremony</a></li>
+        <li><a href="#dresscode">Dress Code</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+
+    <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-2 bg-gray-50 hover:bg-[#fed7aa35] rounded backdrop-blur-lg  text-sm text-gray-900 font-bold transition-all duration-500
+    ease-in-out" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="currentColor"></path>
+        </svg>
+    </a>
+
+    <a class="hidden lg:inline-block py-2 px-2 bg-gray-50 hover:bg-[#fed7aa35] backdrop-blur-lg rounded text-sm text-gray-900 font-bold transition-all duration-500
+    ease-in-out" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+        </svg>
+    </a>
+
+    <div 
+		id="menu-backdrop"
+		class={`
+			absolute 
+			bg-[#fed7aa35] backdrop-blur-lg rounded
+			translate-x-[var(--left)] translate-y-[var(--top)]
+			left-0 top-0
+			w-[var(--width)] h-[var(--height)]
+			transition-all duration-500
+			ease-in-out  opacity-0 -z-10
+		`}>
+	</div>
+</nav>
+
+<div class="navbar-menu relative z-50 hidden">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25">
+    </div>
+
+    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+        
+        <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                <h1 class="text-gray-700 font-playf text-3xl">J&Y</h1>
+            </a>
+            <button class="navbar-close">
+                <svg class="h-6 w-6 text-gray-800 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div>
+            <ul>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#fed7aa35] backdrop-blur-lg rounded transition-all duration-500
+			ease-in-out" href="#wedding">Our Wedding</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#fed7aa35] backdrop-blur-lg rounded transition-all duration-500
+			ease-in-out" href="#reception">Reception</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#fed7aa35] backdrop-blur-lg rounded transition-all duration-500
+			ease-in-out" href="#reception">Ceremony</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#fed7aa35] backdrop-blur-lg rounded transition-all duration-500
+			ease-in-out" href="#dresscode">Dress Code</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#fed7aa35] backdrop-blur-lg rounded transition-all duration-500
+			ease-in-out" href="#rsvp">RSVP</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-auto mx-auto">
+            <div class="pt-6 flex justify-center">
+                <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold hover:bg-[#fed7aa35] backdrop-blur-lg rounded transition-all duration-500
+                ease-in-out" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="currentColor"></path>
+                    </svg>
+                </a>
+
+                <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold hover:bg-[#fed7aa35] backdrop-blur-lg rounded transition-all duration-500
+                ease-in-out" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+                        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+                    </svg>
+                </a>
+                <!-- <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                        <path d="M16.5 7.5l0 .01"></path>
+                    </svg>
+                </a> -->
+            </div>
+            <p class="my-4 text-xs text-center text-gray-400">
+                <span>Neomeisters | Copyright © 2023</span>
+            </p>
+        </div>
+    </nav>
+
+</div>
+
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+    
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+    
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script>
+
+<script>
+	const listItem = document.querySelectorAll('#landing-header li')
+	const menuBackdrop = document.querySelector('#menu-backdrop') as HTMLElement
+
+	listItem.forEach((item) => {
+		item.addEventListener("mouseenter", () => {
+			const { left, top, width, height } = item.getBoundingClientRect()
+
+			menuBackdrop.style.setProperty("--left", `${left}px`)
+			menuBackdrop.style.setProperty("--top", `${top}px`)
+			menuBackdrop.style.setProperty("--width", `${width}px`)
+			menuBackdrop.style.setProperty("--height", `${height}px`)
+			menuBackdrop.style.opacity = "1"
+			menuBackdrop.style.visibility = 'visible'
+		})
+
+		item.addEventListener('mouseleave', () => {
+			menuBackdrop.style.opacity = "0"
+			menuBackdrop.style.visibility = 'hidden'
+		})
+	})
+</script>
