@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ['Raleway, sans-serif'],
-			playf: ['Playfair Display, sans-serif']
+			playf: ['Playfair Display, sans-serif'],
+			eye: ['Eyesome Script', 'sans']
 		},
 		extend: {},
 	},
