@@ -6,11 +6,3 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
 });
-
-module.exports = {
-  optimize: {
-    fonts: {
-      inline: false,
-    },
-  },
-};
