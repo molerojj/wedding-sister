@@ -2,26 +2,13 @@
 ---
 
 <section id="hero" class="bg-black h-screen w-screen text-center relative overflow-hidden">
-	<div class="relative z-30 h-full flex flex-col items-center">
 
-		<h2 class="text-white text-6xl lg:text-8xl font-playf pt-36 lg:pt-40">Better Together</h2>
+	<div class="relative z-30 h-full flex flex-col items-center justify-end pb-20 lg:pb-10">
 
-		<div class="flex flex-col items-center justify-center pt-10 gap-y-4 text-white">
-			<div class="flex justify-center items-center lg:gap-x-10 gap-7 font-playf text-xl">
-				<p class="day"></p>:
-				<p class="hour"></p>:
-				<p class="min"></p>:
-				<p class="sec"></p>
-			</div>
-			<div class="flex font-playf text-xl lg:gap-x-14 gap-x-10">
-				<p>Days</p>
-				<p>Hours</p>
-				<p>Min</p>
-				<p>Sec</p>
-			</div>
-		</div>
-		
-		<p class="italic lg:pt-28 pt-44 text-[14px] text-base px-20 text-white w-[550px] text-center">"Better to be two than one, together to grow, help each other, contain each other and defend each other; Even better if there are three with Christ, because a triple cord is not easily cut."</p>
+		<h2 class="text-white text-6xl lg:text-8xl font-eye">Better Together</h2>
+		<p class="font-playf pt-5 text-2xl px-10 text-white text-center">December 15, 2023</p>
+	
+		<p class="italic pt-10 text-base px-10 text-white lg:w-[830px] text-center">"Better to be two than one, together to grow, help each other, contain each other and defend each other; Even better if there are three with Christ, because a triple cord is not easily cut."</p>
 
 	</div>
 	
@@ -32,35 +19,5 @@
 			class="object-cover object-center w-full h-full" 
 		/>
 	</div>
+
 </section>
-
-<script>
-	function actualizarContador() {
-// Fecha objetivo
-	const fechaObjetivo = new Date("2023-12-15T23:59:59");
-
-	// Fecha actual
-	const fechaActual = new Date();
-
-	// Diferencia en milisegundos entre las fechas
-	const diferencia = fechaObjetivo - fechaActual;
-
-	// Cálculos para obtener los días, horas, minutos y segundos restantes
-	const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-	const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-	const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-	// Actualizar el contenido del contador
-	document.querySelector(".day").innerHTML = `${dias}`;
-	document.querySelector(".hour").innerHTML = `${horas}`;
-	document.querySelector(".min").innerHTML = `${minutos}`;
-	document.querySelector(".sec").innerHTML = `${segundos}`;
-
-	// Actualizar cada segundo
-	setTimeout(actualizarContador, 1000);
-}
-
-actualizarContador();
-
-</script>
