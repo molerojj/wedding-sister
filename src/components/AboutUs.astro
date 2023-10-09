@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section id="about" class="bg-white h-screen w-screen overflow-hidden flex justify-center">
 
     <div class="flex flex-col justify-around items-center py-10">
@@ -5,24 +12,25 @@
         <div class="flex flex-col lg:flex-row justify-center items-center px-10 lg:gap-60 gap-14 lg:pt-20">
 
             <div>
-                <h2 class="font-semibold text-4xl lg:text-5xl uppercase">About Us</h2>
+                <h2 class="font-semibold text-4xl lg:text-5xl uppercase">{t('about.title')}</h2>
             </div>
-            <div class="flex flex-col gap-10 lg:w-96">
-                <p>Jack excel Yeldy powerpoint<br />
-                    Jack morning person Yeldy after 10am<br />
-                    Jack no bun Yeldy arepa con queso<br />
-                    Jack text  Yeldy Videocall<br />
-                    Jack rare Yeldy well done<br />
-                    Jack Facebook Yeldy Instagram
+            <div class="flex flex-col gap-10 lg:w-[400px]">
+                <p>{t('about.t1')}<br />
+                    {t('about.t2')}<br />
+                    {t('about.t3')}<br />
+                    {t('about.t4')}<br />
+                    {t('about.t5')}<br />
+                    {t('about.t6')}
                 </p>
                 <p>
-                    We love family, traveling, eating, planning, lying on the couch and sharing (well more me than Him but now we are one hahaha 😄)</p>
+                    {t('about.parragraph')}
+                </p>
             </div>
         </div>
 
         <div>
-            <p class="hidden lg:block font-eye text-3xl lg:text-5xl">“We love because God loved us first.”</p>
-            <p class="lg:hidden text-center font-eye text-4xl lg:text-5xl">“We love because God <br/>loved us first.”</p>
+            <p class="hidden lg:block font-eye text-3xl lg:text-5xl">“{t('about.phrase1')}”</p>
+            <p class="lg:hidden text-center font-eye text-4xl lg:text-5xl">“{t('about.phrase2')} <br/>{t('about.phrase3')}”</p>
         </div>
 
     </div>

@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="wedding" class="bg-white pt-20 h-screen w-screen text-center relative overflow-hidden">
@@ -6,8 +10,8 @@
 	<div class="relative z-30 h-full flex flex-col-reverse lg:flex-row items-center">
 
 		<div class="flex flex-col gap-5 lg:gap-10 text-gray-900 pt-6 lg:pt-0">
-			<h2 class="font-semibold text-4xl lg:text-5xl">OUR WEDDING</h2>
-			<p class="lg:px-28 px-6">We are happy to invite you to celebrate with us a day full of love where we will celebrate our union. We know that your company will fill us with joy and will come with the best wishes.</p>
+			<h2 class="font-semibold text-4xl lg:text-5xl">{t('our.title')}</h2>
+			<p class="lg:px-28 px-6">{t('our.paragraph')}</p>
 			<div class="flex flex-col items-center justify-center gap-y-4 text-gray-900">
 				<div class="flex justify-center items-center lg:gap-x-10 gap-7 text-xl">
 					<p class="day"></p>:
@@ -16,18 +20,18 @@
 					<p class="sec"></p>
 				</div>
 				<div class="font-semibold flex text-xl lg:gap-x-14 gap-x-9">
-					<p>Days</p>
-					<p>Hours</p>
-					<p>Min</p>
-					<p>Sec</p>
+					<p>{t('our.day')}</p>
+					<p>{t('our.hour')}</p>
+					<p>{t('our.min')}</p>
+					<p>{t('our.sec')}</p>
 				</div>
 			</div>
-			<p class="font-eye text-4xl lg:text-5xl lg:pt-20 pb-10">The adventure begining...</p>
+			<p class="font-eye text-4xl lg:text-5xl lg:pt-20 pb-10">{t('our.phrase')}</p>
 		</div>
 
 		<div>
 			<img
-				src="./foto-wedding.jpg" 
+				src="/foto-wedding.jpg" 
 				alt="Yeldy y Jack" 
 				class="object-cover object-center w-full h-full" 
 			/>
@@ -37,7 +41,7 @@
 	
 	<div class="absolute top-16 bottom-16 h-full w-full z-10 opacity-20">
 		<img
-			src="./mapa.png" 
+			src="/mapa.png" 
 			alt="Yeldy y Jack" 
 			class="object-cover object-center w-full h-full" 
 		/>

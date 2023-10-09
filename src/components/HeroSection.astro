@@ -1,19 +1,22 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="hero" class="bg-black h-screen w-screen text-center relative overflow-hidden">
 
 	<div class="relative z-30 h-full flex flex-col items-center justify-end pb-24 lg:pb-10">
-		<h2 class="text-white text-6xl lg:text-8xl font-eye">Better Together</h2>
-		<p class="pt-5 font-semibold uppercase text-2xl px-10 text-white text-center">December 15, 2023</p>
+		<h2 class="text-white text-6xl lg:text-8xl font-eye">{t('hero.title')}</h2>
+		<p class="pt-5 font-semibold uppercase text-2xl px-10 text-white text-center">{t('hero.date')}</p>
 	
-		<p class="italic pt-10 text-xl px-10 text-white lg:w-[830px] text-center">"Two are better than one, and even more united with Christ, <br/>three-fold cord difficult to break."</p>
-
+		<p class="italic pt-10 text-xl px-10 text-white lg:w-[830px] text-center">"{t('hero.phrase1')}<br/>{t('hero.phrase2')}"</p>
 	</div>
 	
 	<div class="absolute top-16 bottom-0 h-full w-full z-10 opacity-70">
 		<img
-			src="./foto-main.jpg" 
+			src="/foto-main.jpg"
 			alt="Yeldy y Jack" 
 			class="object-cover object-center w-full h-full" 
 		/>

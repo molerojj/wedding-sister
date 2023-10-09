@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="dresscode" class="bg-white h-screen w-screen text-center relative overflow-hidden">
@@ -6,14 +10,14 @@
 	<div class="relative z-30 h-full flex flex-col lg:flex-row lg:gap-28 items-center justify-center">
 
 		<div class="flex flex-col gap-2 text-gray-900 pt-10 justify-center">
-			<h2 class="font-semibold text-4xl lg:text-5xl">DRESS CODE</h2>
+			<h2 class="font-semibold text-4xl lg:text-5xl">{t('dress.title')}</h2>
 			<p class="text-4xl font-semibold lg:pt-20 py-10">Semiformal</p>
-			<p class="font-eye text-4xl lg:text-5xl lg:pt-20">Dress your best smile</p>
+			<p class="font-eye text-4xl lg:text-5xl lg:pt-20">{t('dress.phrase')}</p>
         </div>
 
 		<div class="lg:w-[400px] w-80 mt-8">
 			<img
-				src="./foto-elipse.png" 
+				src="/foto-elipse.png" 
 				alt="Yeldy y Jack"
 				class="object-cover object-center" 
 			/>
@@ -23,7 +27,7 @@
 	
 	<div class="absolute top-16 bottom-16 h-full w-full z-10 opacity-20">
 		<img
-			src="./mapa.png" 
+			src="/mapa.png" 
 			alt="Yeldy y Jack" 
 			class="object-cover object-center w-full h-full" 
 		/>

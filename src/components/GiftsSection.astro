@@ -1,13 +1,21 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="gifts" class="bg-black h-screen w-screen text-center relative">
 
 	<div class="relative z-30 h-full flex flex-col items-center pt-28">
 
-		<h2 class="text-white text-6xl lg:text-8xl font-eye lg:pb-10">Gifts</h2>
+		<h2 class="text-white text-6xl lg:text-8xl font-eye lg:pb-10">{t('gift.title')}</h2>
 	
-		<p class="italic text-xl lg:w-[660px] pt-10 px-12 text-white text-center">That you are part of our big day and we will celebrate it together is our greatest gift. If you want to give an additional <b>CASH GIFT</b> that would be great!</p>
+		<p class="italic text-xl lg:w-[660px] pt-10 px-12 text-white text-center">
+			{t('gift.text1')} 
+			<b>{t('gift.text2')}</b>
+			{t('gift.text3')}
+		</p>
 
         <div class="lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="text-white icon icon-tabler icon-tabler-cash" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -23,7 +31,7 @@
 
 	<div class="absolute top-0 bottom-0 h-full w-full z-10 opacity-70">
 		<img
-			src="./foto-gifts.jpg" 
+			src="/foto-gifts.jpg" 
 			alt="Yeldy y Jack" 
 			class="object-cover object-center w-full h-full" 
 		/>

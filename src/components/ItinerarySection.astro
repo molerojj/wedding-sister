@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="itinerary" class="bg-white h-screen w-screen relative overflow-hidden">
@@ -7,7 +11,7 @@
 
 		<div class="w-1/2 hidden lg:block">
 			<img
-				src="./foto-itinerary.jpg"
+				src="/foto-itinerary.jpg"
 				alt="Yeldy y Jack" 
 				class="object-cover object-center w-full h-screen" 
 			/>
@@ -15,7 +19,7 @@
 
 		<div class="lg:w-1/2 flex flex-col gap-14 justify-center items-center lg:gap-5 lg:pt-20 text-gray-900">
 
-			<h2 class="font-semibold text-4xl lg:pb-6 lg:text-5xl">ITINERARY</h2>
+			<h2 class="font-semibold text-4xl lg:pb-6 lg:text-5xl">{t('iti.title')}</h2>
 			
 			<div class="flex justify-center">
 
@@ -27,7 +31,7 @@
 							<path d="M111.404 7.66423C101.251 17.8547 101.283 34.3459 111.474 44.4982L112 45.0109L141.347 74.4123C62.6965 77.8918 0 142.757 0 222.266C0 286.342 40.7205 340.908 97.6954 361.497C92.4994 349.342 88.3623 336.635 85.399 323.488C51.5469 302.508 29 265.02 29 222.266C29 156.544 82.2781 103.266 148 103.266C213.722 103.266 267 156.544 267 222.266C267 281.182 224.186 330.097 167.973 339.597C172.514 348.891 178.001 357.66 184.316 365.778C248.496 349.587 296 291.474 296 222.266C296 143.283 234.131 78.7511 156.212 74.4894L157.563 73.134L186.214 44.5353C196.395 34.3722 196.411 17.881 186.248 7.70037C176.086 -2.48127 159.594 -2.49592 149.413 7.66619L148.863 8.21501L148.238 7.59294C138.047 -2.55842 121.556 -2.52717 111.404 7.66423Z" fill="black"/>
 							<path d="M135.343 297.035C135.877 238.122 179.134 189.597 235.431 180.608C230.975 171.273 225.567 162.454 219.326 154.28C155.002 169.887 106.972 227.567 106.344 296.772C105.602 378.507 171.259 445.367 252.994 446.11C334.729 446.852 401.589 381.195 402.332 299.459C402.621 267.621 392.835 238.04 375.948 213.744L379.085 213.938L419.483 216.544C433.838 217.47 446.226 206.583 447.152 192.229C448.078 177.873 437.192 165.486 422.837 164.56L422.061 164.509L422.115 163.629C423 149.272 412.079 136.915 397.721 136.029C383.364 135.144 371.007 146.065 370.122 160.423L370.084 161.156L367.409 202.619C351.128 183.359 330.008 168.306 305.904 159.347C310.99 171.548 315.011 184.293 317.855 197.466C351.515 218.752 373.721 256.444 373.333 299.196C372.736 364.915 318.976 417.707 253.257 417.111C187.538 416.514 134.746 362.754 135.343 297.035Z" fill="black"/>
 							</svg>
-							<p class="pe-5">CEREMONY</p>
+							<p class="pe-5">{t('iti.item2')}</p>
 						</div>
 						<div class="flex items-center justify-center gap-2">
 							<p>4:00 PM</p>
@@ -45,7 +49,7 @@
 								<path d="M17 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
 								<path d="M15 22v-4h-2l2 -6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1l2 6h-2v4"></path>
 							</svg>
-							<p class="pe-5">RECEPTION</p>
+							<p class="pe-5">{t('iti.item4')}</p>
 						</div>
 						<div class="flex items-center justify-center gap-2">
 							<p>6:00 PM</p>
@@ -63,7 +67,7 @@
 
 					<div class="flex flex-col font-bold items-start">
 						<div class="flex justify-center items-center gap-3">
-							<p class="ps-5">WELCOME</p>
+							<p class="ps-5">{t('iti.item1')}</p>
 							<svg xmlns="http://www.w3.org/2000/svg" 
 								class="icon icon-tabler icon-tabler-confetti" 
 								width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -88,7 +92,7 @@
 
 					<div class="flex flex-col font-bold items-start mt-5">
 						<div class="flex justify-center items-center gap-5">
-							<p class="ps-5">COCTAIL</p>
+							<p class="ps-5">{t('iti.item3')}</p>
 							<svg xmlns="http://www.w3.org/2000/svg" 
 								class="icon icon-tabler icon-tabler-glass-full" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -106,7 +110,7 @@
 
 					<div class="flex flex-col font-bold items-start pt-10 pb-10">
 						<div class="flex justify-center items-center gap-3">
-							<p class="ps-5">DINNER</p>
+							<p class="ps-5">{t('iti.item5')}</p>
 							<svg xmlns="http://www.w3.org/2000/svg" 
 								class="icon icon-tabler icon-tabler-tools-kitchen-2" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -124,8 +128,8 @@
 
 			</div>
 
-			<p class="text-lg py-5 text-center">The ceremony start 4:00PM oclock <br/>
-				arrive on time and enjoy full.
+			<p class="text-lg py-5 text-center">{t('iti.note1')}<br/>
+				{t('iti.note2')}
 			</p>
 
 		</div>
@@ -134,7 +138,7 @@
 	
 	<div class="absolute top-16 bottom-16 h-full w-full z-10 opacity-20">
 		<img
-			src="./mapa-iti.png" 
+			src="/mapa-iti.png" 
 			alt="Yeldy y Jack" 
 			class="object-cover object-center w-full h-full" 
 		/>

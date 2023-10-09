@@ -1,20 +1,24 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="rsvp" class="bg-black h-screen w-screen text-center relative">
 
 	<div class="relative z-30 h-full flex flex-col items-center justify-center gap-16 lg:gap-10 pt-10">
 
-		<h2 class="text-white text-6xl lg:text-8xl font-eye">RSVP</h2>
+		<h2 class="text-white text-6xl lg:text-8xl font-eye">{t('rsvp.title')}</h2>
 	
-		<p class="italic text-base text-white text-center">We will be happy to see you there.</p>
+		<p class="italic text-base text-white text-center">{t('rsvp.text')}</p>
 
         <a 
             href="https://wa.link/0sz75h"
             target="_blank"
             class="font-semibold border-[3px] border-white text-white bg-white/5 backdrop-blur-sm rounded-full px-6 py-1 transition-colors hover:bg-white hover:text-gray-900">
             <div class="flex justify-center items-center gap-2">
-                RSVP
+                {t('rsvp.button')}
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp"  width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"    fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -24,23 +28,22 @@
             </div>
         </a>
 
-        <p class="text-white italic text-xl px-14 lg:w-[660px]"><span class="font-eye text-3xl">In God who is almighty</span> to do everything beyond what we imagine,
-			Through Him in us, be glory in this marriage in Christ for all generations. Amen.
+        <p class="text-white italic text-xl px-14 lg:w-[660px]"><span class="font-eye text-3xl">{t('rsvp.phrase1')}</span> {t('rsvp.phrase2')}
 		</p>
 
-		<p class="text-white italic text-2xl text-end">Ephesians 3:20-21</p>
+		<p class="text-white italic text-2xl text-end">{t('rsvp.bible')} 3:20-21</p>
 
 	</div>
 	
 
 	<div class="absolute top-0 bottom-0 h-full w-full z-10 opacity-70">
 		<img
-			src="./foto-rsvp.jpg" 
+			src="/foto-rsvp.jpg" 
 			alt="Yeldy y Jack" 
 			class=" object-cover w-full h-full hidden lg:block" 
 		/>
 		<img
-			src="./foto-rsvp-mobile.jpg" 
+			src="/foto-rsvp-mobile.jpg" 
 			alt="Yeldy y Jack" 
 			class=" object-cover w-full h-full lg:hidden" 
 		/>

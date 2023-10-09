@@ -1,11 +1,15 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="venue" class="bg-black h-screen w-screen text-center relative">
 
 	<div class="relative z-30 h-full flex flex-col items-center justify-center gap-16 lg:gap-10 pt-10">
 
-		<h2 class="text-white text-6xl lg:text-8xl font-eye">The Venue</h2>
+		<h2 class="text-white text-6xl lg:text-8xl font-eye">{t('venue.title')}</h2>
 	
 		<p class="italic text-base text-white text-center">Hotel Home2 Suites Pompano Beach
             200 N Ocean Blvd, Pompano Beach, FL, 33062.</p>
@@ -15,7 +19,7 @@
                 href="https://visitingmedia.com/tt8/?ttid=home2-suites-by-hilton-pompano-beach-pier#/360?group=0&tour=1&b11t0=1&a10ph=1&j2ck2=1&i2d0a=1"
                 target="_blank"
                 class="font-semibold border-[3px] border-white text-white bg-white/5 backdrop-blur-sm rounded-full px-6 py-2 transition-colors hover:bg-white hover:text-gray-900">
-                See the Venue
+                {t('venue.button1')}
             </a>
             <a 
                 href="https://maps.app.goo.gl/AxEo6EFnaEGPfp2LA"
@@ -37,19 +41,19 @@
 
         <div class="flex justify-center text-white gap-4 lg:gap-20">
             <div>
-                <p class="text-[20px] font-bold">PARKING</p>
-                <p>Price $10</p>
-                <p>Cash or Card</p>
+                <p class="text-[20px] font-bold">{t('venue.park')}</p>
+                <p>{t('venue.price')}</p>
+                <p>{t('venue.pay')}</p>
             </div>
     
             <div>
-                <p class="text-[20px] font-bold">BOOKING HOTEL</p>
+                <p class="text-[20px] font-bold">{t('venue.book')}</p>
                 <a 
                     href="https://www.hilton.com/en/hotels/fllprht-home2-suites-pompano-beach-pier/"
                     target="_blank"
                     class="hover:text-gray-300 transition-colors"
                 >
-                    Web Page
+                    {t('venue.web')}
                 </a>
             </div>
         </div>
@@ -59,7 +63,7 @@
 
 	<div class="absolute top-0 bottom-0 h-full w-full z-10 opacity-70">
 		<img
-			src="./hotel.jpg" 
+			src="/hotel.jpg" 
 			alt="Yeldy y Jack" 
 			class="object-cover object-left w-full h-full" 
 		/>

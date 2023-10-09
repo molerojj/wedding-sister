@@ -1,4 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguagePicker from './LanguagePicker.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <nav id="landing-header" class="py-5 shadow-md px-9 flex items-center absolute top-0 w-full justify-between z-40 bg-white">
@@ -16,31 +22,16 @@
         </button>
     </div>
 
-    <ul class="text-gray-900 hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto transition-colors duration-400 [&>li>a]:inline-block [&>li>a]:py-2 [&>li]:px-3">
-        <li><a href="#wedding">Our Wedding</a></li>
-        <li><a href="#venue">The Venue</a></li>
-        <li><a href="#itinerary">Itinerary</a></li>
-        <li><a href="#gifts">Gifts</a></li>
-        <li><a href="#dresscode">Dress Code</a></li>
-        <li><a href="#rsvp">RSVP</a></li>
+    <ul class="text-gray-900 hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto transition-colors duration-400 [&>li>a]:inline-block [&>li>a]:py-2 [&>li]:px-2">
+        <li><a href="#wedding">{t('nav.item1')}</a></li> 
+        <li><a href="#venue">{t('nav.item2')}</a></li>
+        <li><a href="#itinerary">{t('nav.item3')}</a></li>
+        <li><a href="#gifts">{t('nav.item4')}</a></li>
+        <li><a href="#dresscode">{t('nav.item5')}</a></li>
+        <li><a href="#rsvp">{t('nav.item6')}</a></li>
     </ul>
 
-    <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-2 hover:bg-[#00000011] rounded backdrop-blur-lg text-sm text-gray-900 font-bold transition-all duration-500
-    ease-in-out" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" stroke-width="0" fill="currentColor"></path>
-        </svg>
-    </a>
-
-    <a class="hidden lg:inline-block py-2 px-2 hover:bg-[#00000011] backdrop-blur-lg rounded text-sm text-gray-900 font-bold transition-all duration-500
-    ease-in-out" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
-            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
-        </svg>
-    </a>
+    <LanguagePicker />
 
     <div 
 		id="menu-backdrop"
@@ -77,27 +68,27 @@
             <ul>
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
-			ease-in-out" href="#wedding">Our Wedding</a>
+			ease-in-out" href="#wedding">{t('nav.item1')}</a>
                 </li>
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
-			ease-in-out" href="#venue">The Venue</a>
+			ease-in-out" href="#venue">{t('nav.item2')}</a>
                 </li>
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
-			ease-in-out" href="#itinerary">Itinerary</a>
+			ease-in-out" href="#itinerary">{t('nav.item3')}</a>
                 </li>
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
-			ease-in-out" href="#gifts">Gifts</a>
+			ease-in-out" href="#gifts">{t('nav.item4')}</a>
                 </li>
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
-			ease-in-out" href="#dresscode">Dress Code</a>
+			ease-in-out" href="#dresscode">{t('nav.item5')}</a>
                 </li>
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
-			ease-in-out" href="#rsvp">RSVP</a>
+			ease-in-out" href="#rsvp">{t('nav.item6')}</a>
                 </li>
             </ul>
         </div>
