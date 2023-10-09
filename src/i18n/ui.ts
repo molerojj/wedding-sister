@@ -76,7 +76,7 @@ export const ui = {
     },
     es: {
         // navbar
-        'nav.item1': 'La Boda',
+        'nav.item1': 'La boda',
         'nav.item2': 'El lugar',
         'nav.item3': 'Itinerario',
         'nav.item4': 'Regalos',
