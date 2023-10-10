@@ -33,7 +33,7 @@ export const ui = {
         'hero.phrase2': 'three-fold cord difficult to break',
         // our wedding section
         'our.title': 'OUR WEDDING',
-        'our.paragraph': 'We are happy to invite you to celebrate with us a day full of love where we will celebrate our union. We know that your company will fill us with joy and will come with the best wishes.',
+        'our.paragraph': 'We are happy to invite you to celebrate with us a day full of love where we will celebrate our union. We know that your company will fill us with joy and together we will create precious memories.',
         'our.day': 'Days',
         'our.hour': 'Hours',
         'our.min': 'Min',
@@ -82,7 +82,7 @@ export const ui = {
         'nav.item2': 'Lugar',
         'nav.item3': 'Itinerario',
         'nav.item4': 'Regalos',
-        'nav.item5': 'Codigo de Vestimenta',
+        'nav.item5': 'Vestimenta',
         'nav.item6': 'Confirmación',
         // about section
         'about.title': 'NOSOTROS',
@@ -102,13 +102,13 @@ export const ui = {
         'hero.phrase1': "Mejor son dos que uno, y aun mas unidos con Cristo,",
         'hero.phrase2': "cordon de tres dobleces dificil de romper",
         // our wedding section
-        'our.title': 'NOS CASAMOS',
-        'our.paragraph': 'Estamos felices de invitarte a celebrar con nosotros un día lleno de amor donde celebraremos nuestra unión. Sabemos que tu compañia nos llenará de alegría y vendrá con los mejores deseos.',
+        'our.title': 'NOS CASAMOS!',
+        'our.paragraph': 'Estamos felices de invitarte a celebrar con nosotros un día lleno de amor en donde celebraremos nuestra unión en matrimonio. Sabemos que tu compañia nos llenará de alegría y juntos crearemos preciosos recuerdos.',
         'our.day': 'Dias',
         'our.hour': 'Horas',
         'our.min': 'Min',
         'our.sec': 'Seg',
-        'our.phrase': 'Para que juntos creemos preciosos recuerdos',
+        'our.phrase': 'La aventura comienza...',
         // venue section
         'venue.title': 'El lugar',
         'venue.button1': 'Ver el lugar',
@@ -134,12 +134,12 @@ export const ui = {
         'gift.text2': 'REGALO EN EFECTIVO',
         'gift.text3': 'adicional, ¡sería genial!',
         // dress code section
-        'dress.title': 'CÓDIGO DE VESTIMENTA',
+        'dress.title': 'VESTIMENTA',
         'dress.phrase': 'Luce tu mejor sonrisa',
         // RSVP section
         'rsvp.title': 'Confirmación',
         'rsvp.text': 'Estaremos felices de verte allí',
-        'rsvp.button': 'Confirmar',
+        'rsvp.button': 'Allí estaré',
         'rsvp.phrase1': 'En Dios que es todopoderoso',
         'rsvp.phrase2': 'para hacer todo más allá de lo que imaginamos, por Él en nosotros, sea la gloria en este matrimonio en Cristo por todas las generaciones. Amén.',
         'rsvp.bible': 'Efesios',
