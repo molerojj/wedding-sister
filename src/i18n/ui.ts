@@ -72,6 +72,7 @@ export const ui = {
         'rsvp.phrase1': 'In God who is almighty',
         'rsvp.phrase2': 'to do everything beyond what we imagine, Through Him in us, be glory in this marriage in Christ for all generations. Amen.',
         'rsvp.bible': 'Ephesians',
+        'rsvp.link': 'https://wa.link/0sz75h',
         // footer
         'footer.made': 'MADE BY'
     },
@@ -141,6 +142,7 @@ export const ui = {
         'rsvp.phrase1': 'En Dios que es todopoderoso',
         'rsvp.phrase2': 'para hacer todo más allá de lo que imaginamos, por Él en nosotros, sea la gloria en este matrimonio en Cristo por todas las generaciones. Amén.',
         'rsvp.bible': 'Efesios',
+        'rsvp.link': 'https://wa.link/f9obzi',
         // footer
         'footer.made': 'HECHO POR'
     },
