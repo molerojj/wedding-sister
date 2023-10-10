@@ -56,9 +56,7 @@ export const ui = {
         'iti.item5': 'DINNER',
         'iti.item6': 'SEE YOU SOON',
         'iti.text': 'Everything will be in the same place', 
-        'iti.text2': 'PIER 6 ROOFTOP - HOME2SUITE', 
-        'iti.note1': 'The ceremony start 4:00PM oclock',
-        'iti.note2': 'arrive on time and enjoy full',
+        'iti.text2': 'PIER 6 ROOFTOP - HOME2SUITE',
         // gift section
         'gift.title': 'Gifts',
         'gift.text1': 'That you are part of our big day and we will celebrate it together is our greatest gift. If you want to give an additional',
@@ -127,9 +125,7 @@ export const ui = {
         'iti.item5': 'CENA',
         'iti.item6': 'HASTA PRONTO',
         'iti.text': 'Todo será en el mismo lugar', 
-        'iti.text2': 'TERRAZA PIER 6 - HOME2SUITE', 
-        'iti.note1': 'La ceremonia inica a las 4:00PM,',
-        'iti.note2': 'llega a tiempo y disfruta a pleno',
+        'iti.text2': 'TERRAZA PIER 6 - HOME2SUITE',
         // gift section
         'gift.title': 'Regalos',
         'gift.text1': 'Que formes parte de nuestro gran día y lo celebraremos juntos es nuestro mayor regalo. Si desea dar, un',

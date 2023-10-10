@@ -5,13 +5,14 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="wedding" class="bg-white pt-20 h-screen w-screen text-center relative overflow-hidden">
+<section id="wedding" class="bg-white pt-20 h-screen w-screen relative overflow-hidden">
 
 	<div class="relative z-30 h-full flex flex-col-reverse lg:flex-row items-center">
 
 		<div class="flex flex-col gap-5 lg:gap-10 text-gray-900 pt-6 lg:pt-0">
-			<h2 class="font-semibold text-4xl lg:text-5xl">{t('our.title')}</h2>
-			<p class="lg:px-28 px-6">{t('our.paragraph')}</p>
+			<h2 class="font-semibold text-center text-4xl lg:text-5xl">{t('our.title')}</h2>
+			<p class="lg:px-28 px-6 text-center lg:text-left">{t('our.paragraph')}</p>
+
 			<div class="flex flex-col items-center justify-center gap-y-4 text-gray-900">
 				<div class="flex justify-center items-center lg:gap-x-10 gap-7 text-xl">
 					<p class="day"></p>:
@@ -26,7 +27,8 @@ const t = useTranslations(lang);
 					<p>{t('our.sec')}</p>
 				</div>
 			</div>
-			<p class="font-eye text-4xl lg:text-5xl lg:pt-20 pb-10">{t('our.phrase')}</p>
+
+			<p class="font-eye text-4xl lg:text-5xl text-center lg:pt-20 pb-10">{t('our.phrase')}</p>
 		</div>
 
 		<div>
