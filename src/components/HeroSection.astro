@@ -7,18 +7,23 @@ const t = useTranslations(lang);
 
 <section id="hero" class="bg-black h-screen w-screen text-center relative overflow-hidden">
 
-	<div class="relative z-30 h-full flex flex-col items-center justify-end pb-24 lg:pb-10">
-		<h2 class="text-white text-6xl lg:text-8xl font-eye">{t('hero.title')}</h2>
-		<p class="pt-5 font-semibold uppercase text-2xl px-10 text-white text-center">{t('hero.date')}</p>
-	
-		<p class="italic pt-10 text-xl px-10 text-white lg:w-[830px] text-center">"{t('hero.phrase1')}<br/>{t('hero.phrase2')}"</p>
+	<div class="relative z-30 flex flex-col items-center pt-36 gap-10 lg:gap-0">
+		<h2 class="text-white text-6xl lg:text-9xl font-eye">
+			{t('hero.title')}
+		</h2>
+		<p class="font-semibold uppercase text-2xl mx-5 px-3 lg:mt-10 text-white">
+			{t('hero.date')}
+		</p>
+		<p class="italic text-xl px-10 pt-96 lg:pt-56 text-white lg:w-[830px]">
+			"{t('hero.phrase1')}<br/>{t('hero.phrase2')}"
+		</p>
 	</div>
 	
 	<div class="absolute top-16 bottom-0 h-full w-full z-10 opacity-70">
 		<img
-			src="/foto-main.jpg"
+			src="/bg-hero-2.jpeg"
 			alt="Yeldy y Jack" 
-			class="object-cover object-center w-full h-full" 
+			class="object-cover w-full h-full" 
 		/>
 	</div>
 
