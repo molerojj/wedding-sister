@@ -5,23 +5,27 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="hero" class="bg-black h-screen w-screen text-center relative overflow-hidden">
+<section id="hero" class="bg-black h-screen w-screen text-center relative overflow-hidden flex flex-col justify-center items-center">
 
-	<div class="relative z-30 flex flex-col items-center pt-36 gap-10 lg:gap-0">
+	<div class="relative z-30 flex flex-col gap-7 pt-32">
 		<h2 class="text-white text-6xl lg:text-9xl font-eye">
 			{t('hero.title')}
 		</h2>
-		<p class="font-semibold uppercase text-2xl mx-5 px-3 lg:mt-10 text-white">
+
+		<p class="font-semibold uppercase text-2xl text-white">
 			{t('hero.date')}
 		</p>
-		<p class="italic text-xl px-10 pt-80 lg:pt-56 text-white lg:w-[830px]">
-			"{t('hero.phrase1')}<br/>{t('hero.phrase2')}"
+
+		<p class="italic text-xl text-white mx-10">
+			"{t('hero.phrase1')}<br class="hidden lg:block"/>{t('hero.phrase2')}"
 		</p>
 	</div>
+
+	<!-- // background section -->
 	
 	<div class="absolute top-16 bottom-0 h-full w-full z-10 opacity-70">
 		<img
-			src="/bg-hero-2.jpeg"
+			src="/bg-hero-4.jpg"
 			alt="Yeldy y Jack" 
 			class="object-cover w-full h-full" 
 		/>
