@@ -9,6 +9,7 @@ const t = useTranslations(lang);
 
 	<div class="relative z-30 h-screen w-screen flex justify-center items-center">
 
+		<!-- // photo -->
 		<div class="w-1/2 hidden lg:block">
 			<img
 				src="/foto-itinerary.jpg"
@@ -17,9 +18,14 @@ const t = useTranslations(lang);
 			/>
 		</div>
 
-		<div class="lg:w-1/2 flex flex-col gap-14 justify-center items-center lg:gap-5 lg:pt-20 text-gray-900">
+		<!-- // itinerary -->
+
+		<div class="lg:w-1/2 flex flex-col gap-10 justify-center items-center lg:gap-5 lg:pt-20 text-gray-900">
 
 			<h2 class="font-semibold text-4xl lg:pb-6 lg:text-5xl">{t('iti.title')}</h2>
+
+			<p class="font-eye text-4xl text-center ">{t('iti.text')}</p>
+			<p class="font-bold text-xl lg:text-lg text-center">TERRAZA PIER 6 - HOME2SUITE</p>
 			
 			<div class="flex justify-center">
 
@@ -53,6 +59,23 @@ const t = useTranslations(lang);
 						</div>
 						<div class="flex items-center justify-center gap-2">
 							<p>6:00 PM</p>
+							<hr class="bg-gray-900 w-24 lg:w-40 h-[2px]" />
+						</div>
+					</div>
+
+					<div class="flex flex-col items-end font-bold pt-10">
+						<div class="flex justify-center items-center gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock-pause" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M20.942 13.018a9 9 0 1 0 -7.909 7.922"></path>
+								<path d="M12 7v5l2 2"></path>
+								<path d="M17 17v5"></path>
+								<path d="M21 17v5"></path>
+							</svg>
+							<p class="pe-5">{t('iti.item6')}</p>
+						</div>
+						<div class="flex items-center justify-center gap-2">
+							<p>10:00 PM</p>
 							<hr class="bg-gray-900 w-24 lg:w-40 h-[2px]" />
 						</div>
 					</div>
@@ -136,6 +159,9 @@ const t = useTranslations(lang);
 
 	</div>
 	
+
+	<!-- // background map -->
+
 	<div class="absolute top-16 bottom-16 h-full w-full z-10 opacity-20">
 		<img
 			src="/mapa-iti.png" 
