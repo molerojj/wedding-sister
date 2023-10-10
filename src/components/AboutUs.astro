@@ -7,30 +7,33 @@ const t = useTranslations(lang);
 
 <section id="about" class="bg-white h-screen w-screen overflow-hidden flex justify-center">
 
-    <div class="flex flex-col justify-around items-center py-10">
+    <div class="flex flex-col lg:flex-row items-center justify-evenly lg:gap-20">
 
-        <div class="flex flex-col lg:flex-row justify-center items-center px-10 lg:gap-60 gap-14 lg:pt-20">
+        <div class="text-center flex flex-col gap-20">
 
             <div>
                 <h2 class="font-semibold text-4xl lg:text-5xl uppercase">{t('about.title')}</h2>
             </div>
-            <div class="flex flex-col gap-10 lg:w-[400px]">
-                <p>{t('about.t1')}<br />
-                    {t('about.t2')}<br />
-                    {t('about.t3')}<br />
-                    {t('about.t4')}<br />
-                    {t('about.t5')}<br />
-                    {t('about.t6')}
-                </p>
-                <p>
-                    {t('about.parragraph')}
-                </p>
+        
+
+            <div>
+                <p class="hidden lg:block font-eye text-3xl">“{t('about.phrase1')}”</p>
+                <p class="lg:hidden text-center font-eye text-4xl">“{t('about.phrase2')} <br/>{t('about.phrase3')}”</p>
             </div>
+
         </div>
 
-        <div>
-            <p class="hidden lg:block font-eye text-3xl lg:text-5xl">“{t('about.phrase1')}”</p>
-            <p class="lg:hidden text-center font-eye text-4xl lg:text-5xl">“{t('about.phrase2')} <br/>{t('about.phrase3')}”</p>
+        <div class="text-center flex flex-col gap-20 w-[400px]">
+            <p>{t('about.t1')}<br />
+                {t('about.t2')}<br />
+                {t('about.t3')}<br />
+                {t('about.t4')}<br />
+                {t('about.t5')}<br />
+                {t('about.t6')}
+            </p>
+            <p class="px-8">
+                {t('about.parragraph')}
+            </p>
         </div>
 
     </div>
