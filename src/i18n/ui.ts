@@ -51,7 +51,7 @@ export const ui = {
         'iti.title': 'ITINERARY',
         'iti.item1': 'WELCOME',
         'iti.item2': 'CEREMONY',
-        'iti.item3': 'COCTAIL',
+        'iti.item3': 'COCKTAIL',
         'iti.item4': 'RECEPTION',
         'iti.item5': 'DINNER',
         'iti.item6': 'SEE YOU SOON',
