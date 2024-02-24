@@ -8,7 +8,8 @@ export const defaultLang = 'en';
 export const ui = {
     en: {
         // navbar
-        'nav.item1': 'Our Wedding',
+        'nav.item1': 'OUR PHOTO GALLERY',
+        'nav.item15': 'SEE GALLERY',
         'nav.item2': 'The Venue',
         'nav.item3': 'Itinerary',
         'nav.item4': 'Gifts',
@@ -78,7 +79,8 @@ export const ui = {
     },
     es: {
         // navbar
-        'nav.item1': 'Boda',
+        'nav.item1': 'NUESTRA GALERÍA DE RECUERDO',
+        'nav.item15': 'VER GALERÍA',
         'nav.item2': 'Lugar',
         'nav.item3': 'Itinerario',
         'nav.item4': 'Regalos',
