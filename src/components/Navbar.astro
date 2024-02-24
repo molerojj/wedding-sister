@@ -23,22 +23,22 @@ const t = useTranslations(lang);
     </div>
 
     <ul class="text-gray-900 hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto transition-colors duration-400 [&>li>a]:inline-block [&>li>a]:py-2 [&>li]:px-3">
-        <li><a href="#wedding">{t('nav.item1')}</a></li> 
-        <li><a href="#venue">{t('nav.item2')}</a></li>
+        <li><a href="https://yeldyandjackwedding.pic-time.com/-JackYeldyWedding" target="_blank">{t('nav.item1')}</a></li>
+        <!-- <li><a href="#venue">{t('nav.item2')}</a></li>
         <li><a href="#itinerary">{t('nav.item3')}</a></li>
         <li><a href="#gifts">{t('nav.item4')}</a></li>
         <li><a href="#dresscode">{t('nav.item5')}</a></li>
-        <li><a href="#rsvp">{t('nav.item6')}</a></li>
+        <li><a href="#rsvp">{t('nav.item6')}</a></li> -->
     </ul>
 
     <div class="hidden lg:block">
         <LanguagePicker />
     </div>
 
-    <div 
+    <div
 		id="menu-backdrop"
 		class={`
-			absolute 
+			absolute
 			bg-[#00000011] backdrop-blur-lg rounded
 			translate-x-[var(--left)] translate-y-[var(--top)]
 			left-0 top-0
@@ -70,9 +70,9 @@ const t = useTranslations(lang);
             <ul>
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
-			ease-in-out" href="#wedding">{t('nav.item1')}</a>
+			ease-in-out" href="https://yeldyandjackwedding.pic-time.com/-JackYeldyWedding" target="_blank">{t('nav.item1')}</a>
                 </li>
-                <li class="mb-1">
+                <!-- <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
 			ease-in-out" href="#venue">{t('nav.item2')}</a>
                 </li>
@@ -91,7 +91,7 @@ const t = useTranslations(lang);
                 <li class="mb-1">
                     <a class="block p-4 text-sm text-gray-900 hover:bg-[#0000000e] backdrop-blur-lg rounded transition-all duration-500
 			ease-in-out" href="#rsvp">{t('nav.item6')}</a>
-                </li>
+                </li> -->
             </ul>
         </div>
 
@@ -114,7 +114,7 @@ const t = useTranslations(lang);
         // open
         const burger = document.querySelectorAll('.navbar-burger');
         const menu = document.querySelectorAll('.navbar-menu');
-    
+
         if (burger.length && menu.length) {
             for (var i = 0; i < burger.length; i++) {
                 burger[i].addEventListener('click', function() {
@@ -124,11 +124,11 @@ const t = useTranslations(lang);
                 });
             }
         }
-    
+
         // close
         const close = document.querySelectorAll('.navbar-close');
         const backdrop = document.querySelectorAll('.navbar-backdrop');
-    
+
         if (close.length) {
             for (var i = 0; i < close.length; i++) {
                 close[i].addEventListener('click', function() {
